@@ -21,9 +21,14 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/lowprophyle/build-go-microservices/product-api/product-api/data"
+
 	"github.com/gorilla/mux"
-	"github.com/lowprophyle/build-go-microservices/product-api/data"
 )
+
+type productResponse struct {
+	Body []data.Product
+}
 
 type Products struct {
 	logger *log.Logger
